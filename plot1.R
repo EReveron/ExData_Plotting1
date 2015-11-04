@@ -37,8 +37,14 @@ plot1 <- function() {
 	##dt
 	## Create Histogram and Plot it
 
+	png(filename="plo1.png", 
+    		units="px", 
+    		width=480, 
+    		height=480, 
+    		pointsize=12, 
+    		res=72)
+	
 	histogram <- hist(dt$Global_active_power, nclass = 12, plot = FALSE)
  	plot(histogram, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)") 
-
-
+	dev.off()
 }
