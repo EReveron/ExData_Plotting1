@@ -1,4 +1,4 @@
-plot1 <- function() {
+plot2 <- function() {
 
 	## Read Only the Requested Data
 	## We must read the data from 1/2/2007 to 2/2/2007 (two days complete days)
@@ -33,18 +33,19 @@ plot1 <- function() {
 	##dt[,2] <- as.Date(strptime(dt[,2],"%H:%M:%S"))
 
 	dt[,10] <- as.Date(strptime(paste(dt[,1],dt[,2]),"%d/%m/%Y %H:%M:%S"))
+	dt[,11] <- weekdays.Date(dt[,10])
 	
 	##dt
 	## Create Histogram and Plot it
 
-	png(filename="plo1.png", 
+	png(filename="plo2.png", 
     		units="px", 
     		width=480, 
     		height=480, 
     		pointsize=12, 
     		res=72)
 	
-	histogram <- hist(dt$Global_active_power, plot = FALSE)
- 	plot(histogram, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)") 
+	##histogram <- hist(dt$Global_active_power, plot = FALSE)
+ 	plot(dt$Global_active_power,dt$V11,  type = "l", main = "", ylab = "Global Active Power (kilowatts)", xlab = "") 
 	dev.off()
 }
