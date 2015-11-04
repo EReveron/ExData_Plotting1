@@ -27,6 +27,13 @@ plot1 <- function() {
 
 	
 
+	## Format the values in the dataset
+
+	##dt[,1] <- as.Date(strptime(dt[,1],"%d/%m/%Y"))
+	##dt[,2] <- as.Date(strptime(dt[,2],"%H:%M:%S"))
+
+	dt[,10] <- as.Date(strptime(paste(dt[,1],dt[,2]),"%d/%m/%Y %H:%M:%S"))
+	
 	dt
 
 
