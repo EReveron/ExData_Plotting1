@@ -34,7 +34,11 @@ plot1 <- function() {
 
 	dt[,10] <- as.Date(strptime(paste(dt[,1],dt[,2]),"%d/%m/%Y %H:%M:%S"))
 	
-	dt
+	##dt
+	## Create Histogram and Plot it
+
+	histogram <- hist(dt$Global_active_power, nclass = 12, plot = FALSE)
+ 	plot(histogram, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)") 
 
 
 }
