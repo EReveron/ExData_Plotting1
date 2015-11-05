@@ -48,8 +48,9 @@ plot1 <- function() {
     		pointsize=12, 
     		res=72)
 	
-	histogram <- hist(dt$Global_active_power, plot = FALSE)
- 	plot(histogram, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)") 
+	hist(dt$Global_active_power, col = "red", main = "Global Active Power", 
+		xlab = "Global Active Power (kilowatts)")
+
 	dev.off()
 
 }
