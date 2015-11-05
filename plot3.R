@@ -61,24 +61,18 @@ plot3 <- function() {
  	plot(x = x_time, y = dt$Sub_metering_1,type = "l", main = "", ylim = c(0,ymax), col = "black",
 		ylab = "", xlab = "") 
 
-	par(new=T)
-
 	## Plot second series 'Sub_metering_2' in red
 
- 	plot(x = x_time, y = dt$Sub_metering_2,type = "l", main = "", ylim = c(0,ymax), col = "red",
+ 	points(x = x_time, y = dt$Sub_metering_2,type = "l", main = "", ylim = c(0,ymax), col = "red",
 		ylab = "", xlab = "") 
-
-	par(new=T)
 
 	## Plot third series 'Sub_metering_3' in blue
 
- 	plot(x = x_time, y = dt$Sub_metering_3,type = "l", main = "", ylim = c(0,ymax), col = "blue",
+ 	points(x = x_time, y = dt$Sub_metering_3,type = "l", main = "", ylim = c(0,ymax), col = "blue",
 		ylab = "Energy sub metering", xlab = "") 
 
 	legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=c(1,1,1), 
 		col = c("black","red","blue"))
-
-	par(new=F)
 
 	dev.off()
 
