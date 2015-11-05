@@ -1,4 +1,4 @@
-plot1 <- function() { 
+plot1 <- function() {  
 	## plot1.R
 	## Create Plot (Histogram) for 'Global_active_power' requested by the Coursera Exploratory Data Analysis
 	## 		Course Project 1

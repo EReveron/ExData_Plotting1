@@ -1,5 +1,5 @@
 plot2 <- function() { 
-	## plot2.R
+	## plot2.R 
 	## Create Plot:  'Global_active_power' by 'time' requested by the Coursera Exploratory Data Analysis
 	## 		Course Project 1
 	## Written by: Enrique Reveron
