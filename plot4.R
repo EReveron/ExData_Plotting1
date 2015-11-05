@@ -64,7 +64,7 @@ plot4 <- function() {
 	
 	plot(x = x_time, y = dt$Global_active_power,type = "l", main = "", 
 		ylab = "Global Active Power", xlab = "") 
-
+		
 	###### Plot second Graph (Voltage by time)
 	
 	plot(x = x_time, y = dt$Voltage,type = "l", main = "", 
@@ -72,23 +72,24 @@ plot4 <- function() {
 
 	###### Plot third Graph (the same of 'plot3.R' (include three series)
 	
-	##### Plot first series 'Sub_metering_1' in black
+	## Plot first series 'Sub_metering_1' in black
+
  	plot(x = x_time, y = dt$Sub_metering_1,type = "l", main = "", ylim = c(0,ymax), col = "black",
 		ylab = "", xlab = "") 
-	##### Plot second series 'Sub_metering_2' in red
-	par(new=T)
- 	plot(x = x_time, y = dt$Sub_metering_2,type = "l", main = "", ylim = c(0,ymax), col = "red",
+
+	## Plot second series 'Sub_metering_2' in red
+
+ 	points(x = x_time, y = dt$Sub_metering_2,type = "l", main = "", ylim = c(0,ymax), col = "red",
 		ylab = "", xlab = "") 
-	##### Plot third series 'Sub_metering_3' in blue
-	par(new=T)
- 	plot(x = x_time, y = dt$Sub_metering_3,type = "l", main = "", ylim = c(0,ymax), col = "blue",
+
+	## Plot third series 'Sub_metering_3' in blue
+
+ 	points(x = x_time, y = dt$Sub_metering_3,type = "l", main = "", ylim = c(0,ymax), col = "blue",
 		ylab = "Energy sub metering", xlab = "") 
-	##### Print Legend and finish the Graph
+
 	legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=c(1,1,1), 
-		col = c("black","red","blue"), bty = "n")
-	par(new=F)
-
-
+		col = c("black","red","blue"))
+		
 	###### Plot fourth (last) Graph (Global_reactive_power by time) 
 	
 	plot(x = x_time, y = dt$Global_reactive_power,type = "l", main = "", 
