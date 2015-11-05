@@ -1,4 +1,4 @@
-plot4 <- function() {
+plot4 <- function() { 
 	## plot4.R
 	## Create a 2 by 2 Plot Matrix with the Plots requested by the 
 	##	Coursera Exploratory Data Analysis Course Project 1

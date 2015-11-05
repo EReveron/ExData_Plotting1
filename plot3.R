@@ -1,4 +1,4 @@
-plot3 <- function() {
+plot3 <- function() { 
 	## plot3.R
 	## Create a Plot with data series:  'Sub_metering_1','Sub_metering_2' and 'Sub_metering_3' by 'time' 
 	##		requested by the Coursera Exploratory Data Analysis Course Project 1
